@@ -23,14 +23,15 @@ public class IntroGameController implements Initializable {
     Label huongDan;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Tạo Timeline để làm label nhấp nháy
+        // Tạo effect cho label
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(1), huongDan); // Thời gian 1 giây
-        fadeTransition.setFromValue(1);  // Bắt đầu từ độ mờ 100%
-        fadeTransition.setToValue(0);    // Đến độ mờ 0% (ẩn đi)
-        fadeTransition.setCycleCount(FadeTransition.INDEFINITE); // Lặp lại vô hạn
-        fadeTransition.setAutoReverse(true); // Tự động quay lại (hiện lại sau khi mờ)
-        fadeTransition.play();  // Bắt đầu hiệu ứng
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setCycleCount(FadeTransition.INDEFINITE);
+        fadeTransition.setAutoReverse(true);
+        fadeTransition.play();
     }
+    // Bắt sự kiện chuyển nhấn vô màn hình
     public void evenClickedScene(MouseEvent event){
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/click-menu-app-147357.mp3", 1);
         SceneManager.getInstance().switchScene(
