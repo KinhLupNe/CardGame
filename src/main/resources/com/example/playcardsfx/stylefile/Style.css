@@ -1,5 +1,5 @@
-/*Nút bấm*/
 .button {
+
     -fx-background-color: linear-gradient(to right, #FF5733, #FF8D1A, #FFD700); /* Dải chuyển màu từ đỏ, cam đến vàng */
     -fx-text-fill: white; /* Màu chữ trắng */
     -fx-font-size: 22px; /* Kích thước chữ lớn */
@@ -7,12 +7,12 @@
     -fx-border-radius: 30px; /* Bo góc tròn */
     -fx-background-radius: 30px; /* Bo góc nền */
     -fx-padding: 12px 24px; /* Khoảng cách giữa chữ và viền */
-    -fx-cursor: hand; /* Đổi con trỏ thành tay khi di chuột vào nút */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.8, 0, 3); /* Bóng đổ */
     -fx-transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
 }
 
 .button:hover {
+
     -fx-background-color: linear-gradient(to right, #FF512F, #F09819, #FF7E5F); /* Màu nền gradient khi hover (màu sáng hơn) */
     -fx-text-fill: #FFD700; /* Màu chữ vàng khi hover */
     -fx-scale-x: 1.1; /* Phóng to 10% khi hover */

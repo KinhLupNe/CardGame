@@ -19,9 +19,6 @@ public class Player {
         cardsOfPlayer.add(card);
     }
     // Trả về các lá bài
-    public ArrayList<Card> arrayOfCards(){
-        return cardsOfPlayer;
-    }
     public ArrayList<Card> getCardsOfPlayer() {
         return cardsOfPlayer;
     }

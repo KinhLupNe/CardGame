@@ -7,13 +7,16 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.ImageCursor;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class IntroGameController implements Initializable {
@@ -30,6 +33,8 @@ public class IntroGameController implements Initializable {
         fadeTransition.setCycleCount(FadeTransition.INDEFINITE);
         fadeTransition.setAutoReverse(true);
         fadeTransition.play();
+
+
     }
     // Bắt sự kiện chuyển nhấn vô màn hình
     public void evenClickedScene(MouseEvent event){

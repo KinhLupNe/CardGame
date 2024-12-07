@@ -20,7 +20,7 @@ public class Deck{
     public Deck(int i){
         deck = new ArrayList<>();
         String[] suits = {"♣", "♦", "♥", "♠"};
-        String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9"};
 
         //Tạo mảng gồm 36 lá bài
         for(String suit : suits){

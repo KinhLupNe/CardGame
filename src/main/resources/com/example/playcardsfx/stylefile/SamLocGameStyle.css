@@ -1,5 +1,6 @@
 /* Định kiểu cho button */
 .button {
+cursor: none;
     -fx-background-color: linear-gradient(to bottom, #FF9800, #FF5722);  /* Màu nền gradient vàng cam */
     -fx-text-fill: white;  /* Màu chữ trắng */
     -fx-font-size: 18px;  /* Kích thước font chữ */
@@ -13,6 +14,7 @@
 
 /* Hiệu ứng khi di chuột vào nút */
 .button:hover {
+cursor: none;
     -fx-background-color: linear-gradient(to bottom, #FFB300, #FF7043);  /* Màu nền gradient sáng hơn khi hover */
     -fx-scale-x: 1.1;  /* Phóng to nút khi hover */
     -fx-scale-y: 1.1;  /* Phóng to nút khi hover */

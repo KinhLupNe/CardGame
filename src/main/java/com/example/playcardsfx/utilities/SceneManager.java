@@ -2,12 +2,15 @@ package com.example.playcardsfx.utilities;
 
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.ImageCursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * SceneManager là  singleton class quản lý việc chuyển đổi scene trong ứng dụng.
@@ -75,6 +78,7 @@ public class SceneManager {
                     scene.getStylesheets().add(getClass().getResource(cssFile).toExternalForm());
                 }
                 primaryStage.setScene(scene);
+                SceneManager.getInstance().setCursor();
                 primaryStage.show();
             } else {
                 // Nếu đã có scene trước đó, thêm hiệu ứng chuyển cảnh cho mượt
@@ -88,8 +92,10 @@ public class SceneManager {
                     Scene scene = new Scene(newRoot);
                     if (cssFile != null && getClass().getResource(cssFile) != null) {
                         scene.getStylesheets().add(getClass().getResource(cssFile).toExternalForm());
+
                     }
                     primaryStage.setScene(scene);
+                    SceneManager.getInstance().setCursor();
                     FadeTransition fadeIn = new FadeTransition(Duration.millis(500), newRoot);
                     fadeIn.setFromValue(0.8);
                     fadeIn.setToValue(1.0);
@@ -101,6 +107,15 @@ public class SceneManager {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+    // Xử lí thay đổi hình ảnh con trỏ
+    public void setCursor() {
+        if (primaryStage != null && primaryStage.getScene() != null) {
+            Image cursorImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/ImageSource/CursorImage/cursor.gif")));
+            System.out.println(cursorImage.getHeight());
+            ImageCursor customCursor = new ImageCursor(cursorImage);
+            primaryStage.getScene().setCursor(customCursor);
         }
     }
 }

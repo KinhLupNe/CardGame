@@ -40,7 +40,7 @@ public class BaCayController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        MediaManager.getInstance().playBackgroundMusic("/MusicSource/BackgroundMusic/puzzle-game-bright-casual-video-game-music-249202.mp3",0.05);
+        MediaManager.getInstance().playBackgroundMusic("/MusicSource/BackgroundMusic/puzzle-game-bright-casual-video-game-music-249202.mp3",0.1);
         Deck deck1 = new Deck(1);
         deck1.shuffle();
 
