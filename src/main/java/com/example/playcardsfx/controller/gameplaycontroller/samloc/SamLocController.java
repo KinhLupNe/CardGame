@@ -67,17 +67,11 @@ public class SamLocController implements Initializable {
     private int c1, c2;
     private CardRepresentative checkHand;
 
-    //giao dien thoi
-    @FXML
-    private ImageView turn1;
-    @FXML
-    private ImageView turn2;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        MediaManager.getInstance().playBackgroundMusic("/MusicSource/BackgroundMusic/puzzle-game-bright-casual-video-game-music-249202.mp3",0.05);
-
+        MediaManager.getInstance().playBackgroundMusic("/MusicSource/BackgroundMusic/puzzle-game-bright-casual-video-game-music-249202.mp3",0.1);
+        centerHand.setStyle("-fx-background-color: #8B0000;");
         //Khoi tao
         // tro choi moi
         Deck deck2 = new Deck();
@@ -114,7 +108,6 @@ public class SamLocController implements Initializable {
         handOfPlayer1 = new ArrayList<>();
         handOfPlayer2 = new ArrayList<>();
 
-        turn2.setVisible(false);
     }
 
     // Thêm thao tác nhô lên hạ xuống của bài
@@ -233,13 +226,6 @@ public class SamLocController implements Initializable {
             System.out.println("Player 1 win");
         }
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/gambling.mp3", 1);
-        if (count ==1){
-            turn1.setVisible(false);
-            turn2.setVisible(true);
-        }else{
-            turn1.setVisible(true);
-            turn2.setVisible(false);
-        }
 
     }
 
@@ -301,13 +287,6 @@ public class SamLocController implements Initializable {
         if(c2 == 0){
             System.out.println("Player 2 win");
         }
-        if (count ==1){
-            turn1.setVisible(false);
-            turn2.setVisible(true);
-        }else{
-            turn1.setVisible(true);
-            turn2.setVisible(false);
-        }
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/gambling.mp3", 1);
     }
 
@@ -319,13 +298,6 @@ public class SamLocController implements Initializable {
         currentHand = new CardRepresentative(0, 0, 0); // Đặt lại kiểu bài
         // Đặt lại trạng thái bài đã chọn
         resetSelectedCards(handsOfPlayer1, idx1);
-        if (count ==1){
-            turn1.setVisible(false);
-            turn2.setVisible(true);
-        }else{
-            turn1.setVisible(true);
-            turn2.setVisible(false);
-        }
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/select-sound-121244.mp3", 0.7);
     }
 
@@ -336,13 +308,6 @@ public class SamLocController implements Initializable {
 
         // Đặt lại trạng thái bài đã chọn
         resetSelectedCards(handsOfPlayer2, idx2);
-        if (count ==1){
-            turn1.setVisible(false);
-            turn2.setVisible(true);
-        }else{
-            turn1.setVisible(true);
-            turn2.setVisible(false);
-        }
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/select-sound-121244.mp3", 0.7);
     }
 
