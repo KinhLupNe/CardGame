@@ -178,7 +178,6 @@ public class SamLocController implements Initializable {
                 c1 -= m;
             }
         }
-
         else if (count == 0) {
             length1 = turn.generateRepresentative(handOfPlayer1).getLength();
             number1 = turn.generateRepresentative(handOfPlayer1).getNumber();
