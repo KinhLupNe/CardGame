@@ -159,7 +159,7 @@ public class SamLocController implements Initializable {
                 // Tạo hiệu ứng di chuyển
                 TranslateTransition transition2 = new TranslateTransition(Duration.millis(50), clicked);
                 if (!isMovedUp) {
-                    transition2.setToY(-20); // Di chuyển len tren
+                    transition2.setToY(20); // Di chuyển xuong
                     handOfPlayer2.add(player2.getCardOfPlayer(k));
                     idx2.add(k);
                     cardStates.put(clicked, true); // Cập nhật trạng thái
@@ -191,7 +191,9 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for (int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer1.get(idx1.get(0)));
+                    handsOfPlayer1.get(idx1.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer1.get(idx1.get(0)));
+
                     idx1.remove(0);
                 }
                 centerHand.setGraphic(hBox);
@@ -212,8 +214,10 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for (int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer1.get(idx1.get(0)));
+                    handsOfPlayer1.get(idx1.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer1.get(idx1.get(0)));
                     handOfPlayer1.remove(idx1.get(0));
+
                     idx1.remove(0);
                     count = 1;
                 }
@@ -235,6 +239,7 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for(int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer1.get(idx1.get(i)));
+                    handsOfPlayer1.get(idx1.get(i)).setOnMouseClicked(null);
                 }
                 centerHand.setGraphic(hBox);
                 currentHand = turn.generateRepresentative(handOfPlayer1);
@@ -272,6 +277,7 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for (int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer2.get(idx2.get(0)));
+                    handsOfPlayer2.get(idx2.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer2.get(idx2.get(0)));
                     idx2.remove(0);
                     count = 0;
@@ -295,6 +301,7 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for (int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer2.get(idx2.get(i)));
+                    handsOfPlayer2.get(idx2.get(i)).setOnMouseClicked(null);
                 }
                 centerHand.setGraphic(hBox);
                 currentHand = turn.generateRepresentative(handOfPlayer2);
@@ -315,6 +322,7 @@ public class SamLocController implements Initializable {
                 centerHand.setGraphic(null);
                 for (int i = 0; i < m; i++) {
                     hBox.getChildren().add(handsOfPlayer2.get(idx2.get(0)));
+                    handsOfPlayer2.get(idx2.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer2.get(idx2.get(0)));
                     handOfPlayer2.remove(idx2.get(0));
                     idx2.remove(0);

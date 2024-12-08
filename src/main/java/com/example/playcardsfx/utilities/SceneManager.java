@@ -49,11 +49,11 @@ public class SceneManager {
 
 
     /**
-     * Thằng method phụ trách huyển scene cũ sang scene mới
+     * Thằng method phụ trách chuyển scene cũ sang scene mới
      * <p>
      * Hỗ trợ từ a tới z, chỉ cần ném fxml, css vào là xong.
      * <p>
-     * Còn bunus thêm vài thứ thú vị như hiệu ứng chuyển cảnh.
+     * Còn bonus thêm vài thứ thú vị như hiệu ứng chuyển cảnh.
      * </p>
      *
      * @param fxmlFile path đến file FXML định nghia scene mới.
@@ -113,7 +113,6 @@ public class SceneManager {
     public void setCursor() {
         if (primaryStage != null && primaryStage.getScene() != null) {
             Image cursorImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/ImageSource/CursorImage/cursor.gif")));
-            System.out.println(cursorImage.getHeight());
             ImageCursor customCursor = new ImageCursor(cursorImage);
             primaryStage.getScene().setCursor(customCursor);
         }
