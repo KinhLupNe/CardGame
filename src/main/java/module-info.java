@@ -9,16 +9,18 @@ module com.example.playcardsfx {
     opens com.example.playcardsfx.controller.menucontroller to javafx.fxml;
     // Xuất các gói nếu cần thiết
     exports com.example.playcardsfx;
-    exports com.example.playcardsfx.model;
 
 
     exports com.example.playcardsfx.controller.menucontroller;
-    exports com.example.playcardsfx.controller.gameplaycontroller.bacay;
-    opens com.example.playcardsfx.controller.gameplaycontroller.bacay to javafx.fxml;
-    exports com.example.playcardsfx.controller.gameplaycontroller.samloc;
-    opens com.example.playcardsfx.controller.gameplaycontroller.samloc to javafx.fxml;
     exports com.example.playcardsfx.utilities;
     opens com.example.playcardsfx.utilities to javafx.fxml;
+    exports com.example.playcardsfx.model.samloc;
+    opens com.example.playcardsfx.model.samloc to javafx.fxml;
+    exports com.example.playcardsfx.model.bacay;
+    opens com.example.playcardsfx.model.bacay to javafx.fxml;
+    exports com.example.playcardsfx.controller.gameplaycontroller;
+    opens com.example.playcardsfx.controller.gameplaycontroller to javafx.fxml;
+    exports com.example.playcardsfx.model.enities;
 
 
 }

@@ -1,13 +1,13 @@
-package com.example.playcardsfx.controller.gameplaycontroller.bacay;
+package com.example.playcardsfx.model.bacay;
 
-import com.example.playcardsfx.model.Card;
+import com.example.playcardsfx.model.enities.Card;
 
 import java.util.ArrayList;
 
-public class BaCayLogicHelper {
+public class BaCayLogic {
     ArrayList<Card> cards;
 
-    public BaCayLogicHelper(ArrayList<Card> cards) {
+    public BaCayLogic(ArrayList<Card> cards) {
         this.cards = cards;
     }
 

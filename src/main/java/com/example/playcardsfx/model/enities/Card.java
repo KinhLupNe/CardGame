@@ -1,4 +1,4 @@
-package com.example.playcardsfx.model;
+package com.example.playcardsfx.model.enities;
 
 public class Card{
     //Tạo thuộc tính điểm bài và chất bài

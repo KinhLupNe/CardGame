@@ -1,15 +1,15 @@
-package com.example.playcardsfx.controller.gameplaycontroller.samloc;
+package com.example.playcardsfx.model.samloc;
 
 
 
 
-import com.example.playcardsfx.model.Card;
+import com.example.playcardsfx.model.enities.Card;
 
 import java.util.*;
 
 // Các phương thức hỗ trợ kiểm tra và tạo đại diện
 // Các phương thức hỗ trợ kiểm tra và tạo đại diện
-class CardHelper {
+public class CardHelper {
     private String rank;
     private List<Integer> numbers;
 

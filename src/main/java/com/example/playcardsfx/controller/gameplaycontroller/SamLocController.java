@@ -1,9 +1,11 @@
-package com.example.playcardsfx.controller.gameplaycontroller.samloc;
+package com.example.playcardsfx.controller.gameplaycontroller;
 
+import com.example.playcardsfx.model.samloc.CardHelper;
+import com.example.playcardsfx.model.samloc.CardRepresentative;
 import com.example.playcardsfx.utilities.MediaManager;
-import com.example.playcardsfx.model.Card;
-import com.example.playcardsfx.model.Deck;
-import com.example.playcardsfx.model.Player;
+import com.example.playcardsfx.model.enities.Card;
+import com.example.playcardsfx.model.enities.Deck;
+import com.example.playcardsfx.model.enities.Player;
 import com.example.playcardsfx.utilities.SceneManager;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
@@ -43,6 +45,12 @@ public class SamLocController implements Initializable {
     @FXML
     private AnchorPane parent;
 
+    @FXML
+    private ImageView turn1;
+    @FXML
+    private ImageView turn2;
+
+
     //Luu day bai muon danh
     private ArrayList<Card> handOfPlayer1;
     private ArrayList<Card> handOfPlayer2;
@@ -70,10 +78,8 @@ public class SamLocController implements Initializable {
     private int c1, c2;
     private CardRepresentative checkHand;
     private HBox hBox;
-    @FXML
-    private ImageView turn1;
-    @FXML
-    private ImageView turn2;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

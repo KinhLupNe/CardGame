@@ -1,8 +1,9 @@
-package com.example.playcardsfx.controller.gameplaycontroller.bacay;
+package com.example.playcardsfx.controller.gameplaycontroller;
 
+import com.example.playcardsfx.model.bacay.BaCayLogic;
 import com.example.playcardsfx.utilities.MediaManager;
-import com.example.playcardsfx.model.Deck;
-import com.example.playcardsfx.model.Player;
+import com.example.playcardsfx.model.enities.Deck;
+import com.example.playcardsfx.model.enities.Player;
 import com.example.playcardsfx.utilities.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -68,22 +69,9 @@ public class BaCayController implements Initializable {
         hand22.setImage(new Image(getClass().getResourceAsStream("/ImageSource/CardsImage/" + Player2.getCardsOfPlayer().get(1).getRank() + Player2.getCardsOfPlayer().get(1).getSuit()+ ".png")));
         hand23.setImage(new Image(getClass().getResourceAsStream("/ImageSource/CardsImage/" + Player2.getCardsOfPlayer().get(2).getRank() + Player2.getCardsOfPlayer().get(2).getSuit()+ ".png")));
 
-        //Test LogicGame
 
-        /*card11.setText(Player1.getCardsOfPlayer().get(0).getCardIndex());
-        card21.setText(Player1.getCardsOfPlayer().get(1).getCardIndex());
-        card31.setText(Player1.getCardsOfPlayer().get(2).getCardIndex());
-
-        card12.setText(Player2.getCardsOfPlayer().get(0).getCardIndex());
-        card22.setText(Player2.getCardsOfPlayer().get(1).getCardIndex());
-        card32.setText(Player2.getCardsOfPlayer().get(2).getCardIndex());
-
-
-         */
-
-
-        BaCayLogicHelper ply1 = new BaCayLogicHelper(Player1.getCardsOfPlayer());
-        BaCayLogicHelper ply2 = new BaCayLogicHelper(Player2.getCardsOfPlayer());
+        BaCayLogic ply1 = new BaCayLogic(Player1.getCardsOfPlayer());
+        BaCayLogic ply2 = new BaCayLogic(Player2.getCardsOfPlayer());
         //Tính tổng giá trị bài
 
         int m = ply1.countOfCardsIndex(Player1.getCardsOfPlayer());

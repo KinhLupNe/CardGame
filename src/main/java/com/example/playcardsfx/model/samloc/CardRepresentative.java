@@ -1,4 +1,4 @@
-package com.example.playcardsfx.controller.gameplaycontroller.samloc;
+package com.example.playcardsfx.model.samloc;
 
 public class CardRepresentative {
     private int length; // Số lượng lá bài trong tổ hợp
@@ -27,5 +27,21 @@ public class CardRepresentative {
     public String toString() {
         return "(" + length + ", " + number + ", " + type + ")";
     }
+
+    public int compareTo(CardRepresentative currentHand) {
+        // So sánh loại tổ hợp bài (type)
+        if (this.type != currentHand.type) {
+            return Integer.compare(this.type, currentHand.type);
+        }
+
+        // Nếu loại tổ hợp giống nhau, so sánh độ dài (length)
+        if (this.length != currentHand.length) {
+            return Integer.compare(this.length, currentHand.length);
+        }
+
+        // Nếu độ dài giống nhau, so sánh số đại diện (number)
+        return Integer.compare(this.number, currentHand.number);
+    }
+
 }
 
