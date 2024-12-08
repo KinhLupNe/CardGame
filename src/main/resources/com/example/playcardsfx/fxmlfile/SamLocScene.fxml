@@ -31,13 +31,13 @@
                   <Image url="@../../../../ImageSource/GameSamLocImage/PlayerBTurn.gif" />
                </image>
             </ImageView>
-            <Label fx:id="centerHand" alignment="CENTER" layoutX="10.0" layoutY="250.0" prefHeight="100.0" prefWidth="1000.0">
+            <Label fx:id="centerHand" alignment="CENTER" layoutX="10.0" layoutY="244.0" prefHeight="100.0" prefWidth="1000.0">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Button fx:id="db1Button" layoutX="650.0" layoutY="365.0" mnemonicParsing="false" onAction="#danhBai1" onMouseClicked="#onCardClicked" text="Đánh bài" />
-            <Button layoutX="650.0" layoutY="173.0" mnemonicParsing="false" onAction="#danhBai2" onMouseClicked="#onCardClicked" text="Đánh bài" />
+            <Button fx:id="db1Button" layoutX="700.0" layoutY="365.0" mnemonicParsing="false" onAction="#danhBai1" onMouseClicked="#onCardClicked" text="Đánh bài" />
+            <Button layoutX="700.0" layoutY="173.0" mnemonicParsing="false" onAction="#danhBai2" onMouseClicked="#onCardClicked" text="Đánh bài" />
             <ImageView fx:id="hand11" fitHeight="131.0" fitWidth="90.0" layoutX="5.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
             <ImageView fx:id="hand12" fitHeight="131.0" fitWidth="90.0" layoutX="105.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
             <ImageView fx:id="hand13" fitHeight="131.0" fitWidth="90.0" layoutX="205.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
@@ -58,8 +58,8 @@
             <ImageView fx:id="hand23" fitHeight="131.0" fitWidth="90.0" layoutX="210.0" layoutY="14.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
             <ImageView fx:id="hand22" fitHeight="131.0" fitWidth="90.0" layoutX="110.0" layoutY="14.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
             <ImageView fx:id="hand21" fitHeight="131.0" fitWidth="90.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
-            <Button fx:id="db2Button" layoutX="836.0" layoutY="173.0" mnemonicParsing="false" onAction="#boBai2" text="Bỏ bài" />
-            <Button layoutX="836.0" layoutY="365.0" mnemonicParsing="false" onAction="#boBai1" text="Bỏ bài" />
+            <Button fx:id="db2Button" layoutX="870.0" layoutY="173.0" mnemonicParsing="false" onAction="#boBai2" text="Bỏ bài" />
+            <Button layoutX="875.0" layoutY="365.0" mnemonicParsing="false" onAction="#boBai1" text="Bỏ bài" />
             <Button fx:id="resetButton" layoutX="59.0" layoutY="173.0" mnemonicParsing="false" onAction="#resetButtonClicked" text="Chơi lại" />
             <ImageView fx:id="homeButton" fitHeight="71.0" fitWidth="90.0" layoutX="33.0" layoutY="265.0" onMouseClicked="#homeButtonClick" pickOnBounds="true" preserveRatio="true">
                <image>

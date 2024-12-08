@@ -118,67 +118,10 @@ public class SamLocController implements Initializable {
         handOfPlayer1 = new ArrayList<>();
         handOfPlayer2 = new ArrayList<>();
         turn2.setVisible(false);
-
     }
 
     // Thêm thao tác nhô lên hạ xuống của bài
     private Map<ImageView, Boolean> cardStates = new HashMap<>();
-
-    //Event click chuot vao la bai
-    public void onCardClicked(MouseEvent mouseEvent) {
-        // neu getSource ra kieu du lieu ImageView
-        if (mouseEvent.getSource() instanceof ImageView) {
-            ImageView clicked = (ImageView) mouseEvent.getSource();
-            k = handsOfPlayer1.indexOf(clicked);
-
-            if (k != -1) {
-                // Lấy trạng thái của ImageView (true = đang ở trên, false = đang ở dưới)
-                boolean isMovedUp = cardStates.getOrDefault(clicked, false);
-                //Tao hand bai hien tai
-                // Tạo hiệu ứng di chuyển
-                TranslateTransition transition = new TranslateTransition(Duration.millis(50), clicked);
-                if (!isMovedUp) {
-                    transition.setToY(-20); // Di chuyển len tren
-                    handOfPlayer1.add(player1.getCardOfPlayer(k));
-                    idx1.add(k);
-                    cardStates.put(clicked, true); // Cập nhật trạng thái
-
-                } else {
-                    transition.setToY(0); // Di chuyển ve cho ban dau
-                    //Bo la bai ra khoi hand
-                    handOfPlayer1.remove(player1.getCardOfPlayer(k));
-                    idx1.remove(Integer.valueOf(k));
-                    cardStates.put(clicked, false); // Cập nhật trạng thái
-
-                }
-                transition.play(); // Chạy hiệu ứng
-            } else {
-                k = handsOfPlayer2.indexOf(clicked);
-                // Lấy trạng thái của ImageView (true = đang ở trên, false = đang ở dưới)
-                boolean isMovedUp = cardStates.getOrDefault(clicked, false);
-                // Tạo hiệu ứng di chuyển
-                TranslateTransition transition2 = new TranslateTransition(Duration.millis(50), clicked);
-                if (!isMovedUp) {
-                    transition2.setToY(20); // Di chuyển xuong
-                    handOfPlayer2.add(player2.getCardOfPlayer(k));
-                    idx2.add(k);
-                    cardStates.put(clicked, true); // Cập nhật trạng thái
-
-                } else {
-                    transition2.setToY(0); // Di chuyển ve cho ban dau
-                    //Bo la bai ra khoi hand
-                    handOfPlayer2.remove(player2.getCardOfPlayer(k));
-                    idx2.remove(Integer.valueOf(k));
-                    cardStates.put(clicked, false); // Cập nhật trạng thái
-
-                }
-
-
-                transition2.play(); // Chạy hiệu ứng
-            }
-        }
-    }
-
 
     public void danhBai1(ActionEvent actionEvent){
         turn = new CardHelper();
@@ -351,8 +294,6 @@ public class SamLocController implements Initializable {
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/gambling.mp3", 1);
     }
 
-
-
     public void boBai1(ActionEvent event) {
         // Người chơi 1 bỏ lượt, chuyển sang người chơi 2
         count = 1; // Chuyển lượt
@@ -425,6 +366,61 @@ public class SamLocController implements Initializable {
             }
         }
 
+    }
+
+    //Event click chuot vao la bai
+    public void onCardClicked(MouseEvent mouseEvent) {
+        // neu getSource ra kieu du lieu ImageView
+        if (mouseEvent.getSource() instanceof ImageView) {
+            ImageView clicked = (ImageView) mouseEvent.getSource();
+            k = handsOfPlayer1.indexOf(clicked);
+
+            if (k != -1) {
+                // Lấy trạng thái của ImageView (true = đang ở trên, false = đang ở dưới)
+                boolean isMovedUp = cardStates.getOrDefault(clicked, false);
+                //Tao hand bai hien tai
+                // Tạo hiệu ứng di chuyển
+                TranslateTransition transition = new TranslateTransition(Duration.millis(50), clicked);
+                if (!isMovedUp) {
+                    transition.setToY(-20); // Di chuyển len tren
+                    handOfPlayer1.add(player1.getCardOfPlayer(k));
+                    idx1.add(k);
+                    cardStates.put(clicked, true); // Cập nhật trạng thái
+
+                } else {
+                    transition.setToY(0); // Di chuyển ve cho ban dau
+                    //Bo la bai ra khoi hand
+                    handOfPlayer1.remove(player1.getCardOfPlayer(k));
+                    idx1.remove(Integer.valueOf(k));
+                    cardStates.put(clicked, false); // Cập nhật trạng thái
+
+                }
+                transition.play(); // Chạy hiệu ứng
+            } else {
+                k = handsOfPlayer2.indexOf(clicked);
+                // Lấy trạng thái của ImageView (true = đang ở trên, false = đang ở dưới)
+                boolean isMovedUp = cardStates.getOrDefault(clicked, false);
+                // Tạo hiệu ứng di chuyển
+                TranslateTransition transition2 = new TranslateTransition(Duration.millis(50), clicked);
+                if (!isMovedUp) {
+                    transition2.setToY(20); // Di chuyển xuong
+                    handOfPlayer2.add(player2.getCardOfPlayer(k));
+                    idx2.add(k);
+                    cardStates.put(clicked, true); // Cập nhật trạng thái
+
+                } else {
+                    transition2.setToY(0); // Di chuyển ve cho ban dau
+                    //Bo la bai ra khoi hand
+                    handOfPlayer2.remove(player2.getCardOfPlayer(k));
+                    idx2.remove(Integer.valueOf(k));
+                    cardStates.put(clicked, false); // Cập nhật trạng thái
+
+                }
+
+
+                transition2.play(); // Chạy hiệu ứng
+            }
+        }
     }
 
     public void resetButtonClicked(ActionEvent event){
