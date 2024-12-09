@@ -23,12 +23,12 @@
          <children>
             <ImageView fx:id="turn1" fitHeight="114.0" fitWidth="114.0" layoutX="186.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../ImageSource/GameSamLocImage/PlayerATurn.gif" />
+                  <Image url="@../../../../ImageSource/SamLocRealGameImage/PlayerATurn.gif" />
                </image>
             </ImageView>
             <ImageView fx:id="turn2" fitHeight="131.0" fitWidth="114.0" layoutX="172.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../ImageSource/GameSamLocImage/PlayerBTurn.gif" />
+                  <Image url="@../../../../ImageSource/SamLocRealGameImage/PlayerBTurn.gif" />
                </image>
             </ImageView>
             <Label fx:id="centerHand" alignment="CENTER" layoutX="10.0" layoutY="244.0" prefHeight="100.0" prefWidth="1000.0">
@@ -63,9 +63,10 @@
             <Button fx:id="resetButton" layoutX="59.0" layoutY="173.0" mnemonicParsing="false" onAction="#resetButtonClicked" text="Chơi lại" />
             <ImageView fx:id="homeButton" fitHeight="71.0" fitWidth="90.0" layoutX="33.0" layoutY="265.0" onMouseClicked="#homeButtonClick" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../ImageSource/GameSamLocImage/homeButton.png" />
+                  <Image url="@../../../../ImageSource/SamLocRealGameImage/homeButton.png" />
                </image>
             </ImageView>
+            <Label fx:id="result" layoutX="423.0" layoutY="285.0" prefHeight="50.0" prefWidth="153.0" text="Label" visible="false" />
          </children>
       </AnchorPane>
    </children>

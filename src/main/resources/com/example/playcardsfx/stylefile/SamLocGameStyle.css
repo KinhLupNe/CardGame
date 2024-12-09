@@ -49,6 +49,19 @@ cursor: none;
     -fx-padding: 10px;          /* Khoảng cách giữa viền và hình ảnh */
     -fx-background-color: transparent;  /* Đảm bảo nền trong suốt để thấy viền */
 }
+#result{
+    -fx-font-size: 20px; /* Kích thước chữ */
+    -fx-font-weight: bold; /* Chữ đậm */
+    -fx-text-fill: #ffffff; /* Màu chữ (trắng) */
+    -fx-background-color: #ff5722; /* Màu nền (cam sáng) */
+    -fx-padding: 10px; /* Khoảng cách bên trong */
+    -fx-border-color: #ffffff; /* Màu viền (trắng) */
+    -fx-border-width: 2px; /* Độ dày viền */
+    -fx-border-radius: 5px; /* Góc viền tròn */
+    -fx-background-radius: 5px; /* Góc nền tròn */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 2); /* Hiệu ứng bóng đổ */
+
+}
 
 
 

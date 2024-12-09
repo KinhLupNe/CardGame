@@ -10,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,9 +26,18 @@ public class SelectGameController implements Initializable {
     @FXML
     private Button samLocButton;
     @FXML
+    private VBox addOptions;
+    @FXML
+    private Button samLoc1Button;
+    @FXML
+    private Button samLoc2Button;
+
+
+    @FXML
     private ImageView back;
     @FXML
     private Label labelSelect;
+
 
 
     @Override
@@ -44,9 +55,20 @@ public class SelectGameController implements Initializable {
     @FXML
     public void playSamloc(ActionEvent event) throws IOException {
         MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/mouse-click-sound-233951.mp3", 1);
+        addOptions.setVisible(!addOptions.isVisible());
+        addOptions.setManaged(!addOptions.isVisible());
+    }
+    @FXML
+    public  void playSamLocBot(ActionEvent event) throws IOException{
+        MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/mouse-click-sound-233951.mp3", 1);
+        SceneManager.getInstance().setPrimaryStage((Stage)samLocButton.getScene().getWindow());
+        SceneManager.getInstance().switchScene("/com/example/playcardsfx/fxmlfile/SamLocBotScene.fxml", "/com/example/playcardsfx/stylefile/SamLocGameStyle.css");
+    }
+    @FXML
+    public  void playSamLocReal(ActionEvent event) throws IOException{
+        MediaManager.getInstance().playClickSound("/MusicSource/EffectMusic/mouse-click-sound-233951.mp3", 1);
         SceneManager.getInstance().setPrimaryStage((Stage)samLocButton.getScene().getWindow());
         SceneManager.getInstance().switchScene("/com/example/playcardsfx/fxmlfile/SamLocScene.fxml", "/com/example/playcardsfx/stylefile/SamLocGameStyle.css");
-
     }
     /* Back về màn hình chính*/
     @FXML

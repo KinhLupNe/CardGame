@@ -7,6 +7,7 @@ import com.example.playcardsfx.model.enities.Card;
 import com.example.playcardsfx.model.enities.Deck;
 import com.example.playcardsfx.model.enities.Player;
 import com.example.playcardsfx.utilities.SceneManager;
+import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,6 +50,9 @@ public class SamLocController implements Initializable {
     private ImageView turn1;
     @FXML
     private ImageView turn2;
+
+    @FXML
+    private Label result;
 
 
     //Luu day bai muon danh
@@ -199,7 +203,7 @@ public class SamLocController implements Initializable {
             }
         }
         if(c1 == 0){
-            System.out.println("Player 1 win");
+            win();
         }
         if (count ==1){
             turn1.setVisible(false);
@@ -284,7 +288,7 @@ public class SamLocController implements Initializable {
 
 
         if(c2 == 0){
-            System.out.println("Player 2 win");
+            lose();
         }
         if (count ==1){
             turn1.setVisible(false);
@@ -422,6 +426,27 @@ public class SamLocController implements Initializable {
                 transition2.play(); // Chạy hiệu ứng
             }
         }
+    }
+    private void win(){
+        result.setText("Player 1 win!");
+        result.setVisible(true);
+
+        PauseTransition pause = new PauseTransition(Duration.seconds(3));
+        pause.setOnFinished(event ->{
+            SceneManager.getInstance().switchScene("/com/example/playcardsfx/fxmlfile/SamLocBotScene.fxml", "/com/example/playcardsfx/stylefile/SamLocGameStyle.css");
+        } );
+        pause.play();
+    }
+
+    private void lose(){
+        result.setText("Player 2 win!");
+        result.setVisible(true);
+
+        PauseTransition pause = new PauseTransition(Duration.seconds(3));
+        pause.setOnFinished(event ->{
+            SceneManager.getInstance().switchScene("/com/example/playcardsfx/fxmlfile/SamLocBotScene.fxml", "/com/example/playcardsfx/stylefile/SamLocGameStyle.css");
+        } );
+        pause.play();
     }
 
     public void resetButtonClicked(ActionEvent event){

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.playcardsfx.controller.gameplaycontroller.SamLocBotController">
+   <children>
+      <ImageView fitHeight="601.0" fitWidth="1146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../ImageSource/BackgroundImage/BackGround7.gif" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="hand11" fitHeight="120.0" fitWidth="90.0" layoutX="5.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand12" fitHeight="120.0" fitWidth="90.0" layoutX="105.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand13" fitHeight="120.0" fitWidth="90.0" layoutX="205.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand14" fitHeight="120.0" fitWidth="90.0" layoutX="305.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand15" fitHeight="120.0" fitWidth="90.0" layoutX="405.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand16" fitHeight="120.0" fitWidth="90.0" layoutX="505.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand17" fitHeight="120.0" fitWidth="90.0" layoutX="605.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand18" fitHeight="120.0" fitWidth="90.0" layoutX="705.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand19" fitHeight="120.0" fitWidth="90.0" layoutX="805.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand110" fitHeight="120.0" fitWidth="90.0" layoutX="905.0" layoutY="450.0" onMouseClicked="#onCardClicked" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand21" fitHeight="120.0" fitWidth="90.0" layoutX="5.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand22" fitHeight="120.0" fitWidth="90.0" layoutX="105.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand23" fitHeight="120.0" fitWidth="90.0" layoutX="205.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand24" fitHeight="120.0" fitWidth="90.0" layoutX="305.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand25" fitHeight="120.0" fitWidth="90.0" layoutX="405.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand26" fitHeight="120.0" fitWidth="90.0" layoutX="505.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand27" fitHeight="120.0" fitWidth="90.0" layoutX="605.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand28" fitHeight="120.0" fitWidth="90.0" layoutX="705.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand29" fitHeight="120.0" fitWidth="90.0" layoutX="805.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hand210" fitHeight="120.0" fitWidth="90.0" layoutX="905.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="banhBaiButton" layoutX="686.0" layoutY="367.0" mnemonicParsing="false" onAction="#danhBai" text="Đánh bài" />
+            <Button fx:id="boBaiButton" layoutX="850.0" layoutY="367.0" mnemonicParsing="false" onAction="#boBai" text="Bỏ bài" />
+            <Label fx:id="centerHand" layoutY="257.0" prefHeight="100.0" prefWidth="1000.0" />
+            <Button fx:id="resetButton" layoutX="69.0" layoutY="160.0" mnemonicParsing="false" onAction="#resetButtonClicked" text="Chơi lại" />
+            <ImageView fx:id="homeButton" fitHeight="85.0" fitWidth="73.0" layoutX="5.0" layoutY="257.0" onMouseClicked="#homeButtonClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../ImageSource/SamLocBotGameImage/homeButton.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="turnBot" fitHeight="66.0" fitWidth="98.0" layoutX="601.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="turnPlayer" fitHeight="66.0" fitWidth="73.0" layoutX="195.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="result" layoutX="432.0" layoutY="270.0" prefHeight="74.0" prefWidth="120.0" text="Label" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

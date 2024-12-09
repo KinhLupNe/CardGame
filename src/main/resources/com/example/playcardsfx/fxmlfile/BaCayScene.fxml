@@ -45,7 +45,7 @@
             <Button fx:id="resetButton" layoutX="848.0" layoutY="279.0" mnemonicParsing="false" onAction="#reset" text="Chơi lại" />
             <ImageView fx:id="homeButton" fitHeight="71.0" fitWidth="73.0" layoutX="41.0" layoutY="244.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../ImageSource/GameBaCayImage/homeButton.png" />
+                  <Image url="@../../../../ImageSource/BaCayGameImage/homeButton.png" />
                </image>
             </ImageView>
          </children>

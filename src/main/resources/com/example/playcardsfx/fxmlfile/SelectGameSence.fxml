@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.playcardsfx.controller.menucontroller.SelectGameController">
    <children>
@@ -45,6 +46,13 @@
                   <Image url="@../../../../ImageSource/GameSelectImage/img.png" />
                </image>
             </ImageView>
+            <VBox fx:id="addOptions" layoutX="348.0" layoutY="343.0" prefHeight="200.0" prefWidth="191.0" visible="false">
+               <children>
+                  <Button fx:id="samLoc1Button" mnemonicParsing="false" onAction="#playSamLocBot" prefHeight="25.0" prefWidth="194.0" text="Chơi với máy" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="199.0" text="Button" visible="false" />
+                  <Button fx:id="samLoc2Button" mnemonicParsing="false" onAction="#playSamLocReal" prefHeight="25.0" prefWidth="195.0" text="Chơi 2 người" />
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </children>
