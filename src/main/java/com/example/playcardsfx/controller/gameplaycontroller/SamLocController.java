@@ -142,7 +142,6 @@ public class SamLocController implements Initializable {
                     hBox.getChildren().add(handsOfPlayer1.get(idx1.get(0)));
                     handsOfPlayer1.get(idx1.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer1.get(idx1.get(0)));
-
                     idx1.remove(0);
                 }
                 centerHand.setGraphic(hBox);
@@ -166,7 +165,6 @@ public class SamLocController implements Initializable {
                     handsOfPlayer1.get(idx1.get(0)).setOnMouseClicked(null);
                     parent.getChildren().remove(handsOfPlayer1.get(idx1.get(0)));
                     handOfPlayer1.remove(idx1.get(0));
-
                     idx1.remove(0);
                     count = 1;
                 }
@@ -243,7 +241,6 @@ public class SamLocController implements Initializable {
             length2 = turn.generateRepresentative(handOfPlayer2).getLength();
             number2 = turn.generateRepresentative(handOfPlayer2).getNumber();
             type2 = turn.generateRepresentative(handOfPlayer2).getType();
-
             if (currentHand.getLength() == length2 && currentHand.getNumber() < number2 && currentHand.getType() == type2) {
                 hBox.getChildren().clear();
                 centerHand.setGraphic(null);
@@ -379,7 +376,6 @@ public class SamLocController implements Initializable {
         if (mouseEvent.getSource() instanceof ImageView) {
             ImageView clicked = (ImageView) mouseEvent.getSource();
             k = handsOfPlayer1.indexOf(clicked);
-
             if (k != -1) {
                 // Lấy trạng thái của ImageView (true = đang ở trên, false = đang ở dưới)
                 boolean isMovedUp = cardStates.getOrDefault(clicked, false);

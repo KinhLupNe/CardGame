@@ -19,8 +19,8 @@ public class Main extends Application {
         SceneManager.getInstance().setPrimaryStage(stage);
         SceneManager.getInstance().switchScene("/com/example/playcardsfx/fxmlfile/IntroGameScene.fxml", "/com/example/playcardsfx/stylefile/IntroGameStyle.css");
         stage.setResizable(false);
-
-
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/ImageSource/ImageDecorateImgae/images.jpg")));
+        stage.setTitle("Bài Bạc 88");
     }
     public static void main(String[] args) {
         launch();

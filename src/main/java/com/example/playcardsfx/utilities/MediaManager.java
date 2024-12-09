@@ -8,11 +8,11 @@ import java.net.URL;
 /**
  * MediaManager là singleton class, phụ trách điều khiển các thao tác liên quan đến việc phát nhạc nền và âm thanh trong ứng dụng.
  * <p>
- * Class tiện ích nên là singleton clas
+ * Class tiện ích, cần lưu trữ trạng thái nên là singleton clas
  * <p>
  * singleton là 1 design pattern , nó đảm bảo rằng chỉ có 1 thể hiện duy nhất suốt vàng đời ứng dụng.
  *<p>
- * nói cách khác là nó sẽ tạp 1 đối tượng duy nhất và toàn cục (có thể truy cập mọi nơi).
+ * Nói cách khác là nó sẽ tạp 1 đối tượng duy nhất và toàn cục, quan trọng là nó có thể lưu ddc trạng thái
  *<p>
  * nó khá hữu dụng khi sử lí những thao tác, chức năng xuyên suốt cả ứng dụng (như nhạc nền, thay con trỏ, chuyển scene ,vv.)
  *<p>
