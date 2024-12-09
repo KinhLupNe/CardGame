@@ -1,0 +1,53 @@
+@startuml
+allowmixing
+
+package "model" {
+    package bacay {
+
+    }
+    package entities {
+
+    }
+    package samloc {
+
+    }
+}
+
+package "controller" {
+    package "gameplaycontroller" {
+
+    }
+
+    package "menucontroller" {
+        class GameLoadingController
+        class IntroGameController
+        class SelectGameController
+        class StartMenuController
+    }
+
+    package "utilities" {
+        class MediaManager
+        class SceneManager
+    }
+}
+
+file "view" {
+    file "fxmlfile"{
+    }
+    file "cssfile"{
+    }
+    file "ImageSource"{
+    }
+    file "MusicSource"{
+    }
+}
+' Quan hệ giữa các thành phần
+"controller" --> "model" : "sử dụng"
+"menucontroller" --> "utilities" : "sử dụng"
+"gameplaycontroller" --> "utilities" : "sử dụng"
+"view" <--"controller" : "cập nhật"
+"view" -->"controller" : "gửi thông tin thao tác trên view"
+
+
+
+@enduml

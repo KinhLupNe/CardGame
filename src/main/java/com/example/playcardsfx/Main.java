@@ -1,15 +1,12 @@
 package com.example.playcardsfx;
 
-import com.example.playcardsfx.utilities.MediaManager;
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.MediaManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.application.Application;
-import javafx.scene.Cursor;
-import javafx.scene.ImageCursor;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class Main extends Application {
 

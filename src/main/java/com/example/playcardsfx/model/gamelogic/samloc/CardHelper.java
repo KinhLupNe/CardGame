@@ -1,4 +1,4 @@
-package com.example.playcardsfx.model.samloc;
+package com.example.playcardsfx.model.gamelogic.samloc;
 
 
 

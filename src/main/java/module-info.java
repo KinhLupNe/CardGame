@@ -12,12 +12,12 @@ module com.example.playcardsfx {
 
 
     exports com.example.playcardsfx.controller.menucontroller;
-    exports com.example.playcardsfx.utilities;
-    opens com.example.playcardsfx.utilities to javafx.fxml;
-    exports com.example.playcardsfx.model.samloc;
-    opens com.example.playcardsfx.model.samloc to javafx.fxml;
-    exports com.example.playcardsfx.model.bacay;
-    opens com.example.playcardsfx.model.bacay to javafx.fxml;
+    exports com.example.playcardsfx.controller.utilities;
+    opens com.example.playcardsfx.controller.utilities to javafx.fxml;
+    exports com.example.playcardsfx.model.gamelogic.samloc;
+    opens com.example.playcardsfx.model.gamelogic.samloc to javafx.fxml;
+    exports com.example.playcardsfx.model.gamelogic.bacay;
+    opens com.example.playcardsfx.model.gamelogic.bacay to javafx.fxml;
     exports com.example.playcardsfx.controller.gameplaycontroller;
     opens com.example.playcardsfx.controller.gameplaycontroller to javafx.fxml;
     exports com.example.playcardsfx.model.enities;

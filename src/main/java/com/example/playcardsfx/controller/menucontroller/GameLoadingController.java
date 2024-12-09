@@ -1,6 +1,6 @@
 package com.example.playcardsfx.controller.menucontroller;
 
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;

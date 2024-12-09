@@ -1,4 +1,4 @@
-package com.example.playcardsfx.model.samloc;
+package com.example.playcardsfx.model.gamelogic.samloc;
 
 public class CardRepresentative {
     private int length; // Số lượng lá bài trong tổ hợp

@@ -1,12 +1,12 @@
 package com.example.playcardsfx.controller.gameplaycontroller;
 
-import com.example.playcardsfx.model.samloc.CardHelper;
-import com.example.playcardsfx.model.samloc.CardRepresentative;
-import com.example.playcardsfx.utilities.MediaManager;
+import com.example.playcardsfx.model.gamelogic.samloc.CardHelper;
+import com.example.playcardsfx.model.gamelogic.samloc.CardRepresentative;
+import com.example.playcardsfx.controller.utilities.MediaManager;
 import com.example.playcardsfx.model.enities.Card;
 import com.example.playcardsfx.model.enities.Deck;
 import com.example.playcardsfx.model.enities.Player;
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;

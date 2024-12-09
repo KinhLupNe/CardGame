@@ -1,10 +1,10 @@
 package com.example.playcardsfx.controller.gameplaycontroller;
 
-import com.example.playcardsfx.model.bacay.BaCayLogic;
-import com.example.playcardsfx.utilities.MediaManager;
+import com.example.playcardsfx.model.gamelogic.bacay.BaCayLogic;
+import com.example.playcardsfx.controller.utilities.MediaManager;
 import com.example.playcardsfx.model.enities.Deck;
 import com.example.playcardsfx.model.enities.Player;
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

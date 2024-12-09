@@ -1,4 +1,4 @@
-package com.example.playcardsfx.utilities;
+package com.example.playcardsfx.controller.utilities;
 
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;

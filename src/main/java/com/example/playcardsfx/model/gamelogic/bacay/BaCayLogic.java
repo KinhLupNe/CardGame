@@ -1,4 +1,4 @@
-package com.example.playcardsfx.model.bacay;
+package com.example.playcardsfx.model.gamelogic.bacay;
 
 import com.example.playcardsfx.model.enities.Card;
 

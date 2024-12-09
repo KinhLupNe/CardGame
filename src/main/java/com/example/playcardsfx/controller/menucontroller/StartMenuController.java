@@ -1,7 +1,7 @@
 package com.example.playcardsfx.controller.menucontroller;
 
-import com.example.playcardsfx.utilities.MediaManager;
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.MediaManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

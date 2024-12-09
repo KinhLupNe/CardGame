@@ -1,22 +1,17 @@
 package com.example.playcardsfx.controller.menucontroller;
 
-import com.example.playcardsfx.utilities.MediaManager;
-import com.example.playcardsfx.utilities.SceneManager;
+import com.example.playcardsfx.controller.utilities.MediaManager;
+import com.example.playcardsfx.controller.utilities.SceneManager;
 import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.ImageCursor;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class IntroGameController implements Initializable {
