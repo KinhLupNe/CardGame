@@ -15,9 +15,9 @@
       </ImageView>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fx:id="logoTeam" fitHeight="239.0" fitWidth="451.0" layoutX="303.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logoTeam" fitHeight="246.0" fitWidth="488.0" layoutX="270.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../ImageSource/IntroGameImage/image_2024-12-06_234652135_preview_rev_1.png" />
+                  <Image url="@../../../../ImageSource/IntroGameImage/image_2024-12-10_022308662-removebg-preview.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="73.0" fitWidth="65.0" layoutX="928.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
